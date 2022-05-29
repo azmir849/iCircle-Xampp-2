@@ -1,0 +1,609 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title id="tabName"></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Flaticons  -->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Import dynamic script from js -->
+	<script src="./js/dynamicScript.js"></script>
+
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+	<div id="loader"></div>
+
+<style>
+video {
+  width: 100%;
+  height: auto;
+}
+.list-element {
+    display: none;
+}
+#loadmore {
+    margin: 50px auto 0px;
+    display: table;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 4px;
+    background-color: #1c9d5d;
+	outline: none;
+}
+.list-element:nth-child(1) {
+    display: block;
+}
+.list-element:nth-child(2) {
+    display: block;
+}
+.list-element:nth-child(3) {
+    display: block;
+}
+
+#more {display: none;}
+.readBtn{
+        color: #000;
+        margin-bottom: 20px;
+		outline: none;
+		outline-color: #fff !important;
+		border: none;
+		background: none;
+		text-align: left;
+		font-size: 20px;
+		font-weight: 600;
+		text-transform: uppercase;
+    }
+</style>
+<div >
+	<div  class="animate-bottom">
+		<div id="wholePage"  style="display: none;"  class="container-wrap">
+			<a href="#" class="js-johnDoe-nav-toggle johnDoe-nav-toggle" data-toggle="collapse" data-target="#navbar"
+				aria-expanded="false" aria-controls="navbar"><i></i></a>
+
+			<aside id="johnDoe-aside" role="complementary" class="border js-fullheight">
+				<div class="text-center">
+					<div  class="authorImgBg">
+						<div id="authorImg" class="author-img" style="background-image: url();"></div>
+					</div>
+					<h1 id="johnDoe-logo"></h1>
+					<h5 id="johnDoeSideBarDesignation" class="johnDoeSideBarDesignation"></h5>
+				</div>
+				<nav id="johnDoe-main-menu" role="navigation" class="navbar">
+					<div id="navbar" class="collapse">
+						<ul id="asideUlList" class="nav">
+							<li class=""><a href="#" data-nav-section="home">Home</a></li>
+							<li><a href="#" data-nav-section="about">About</a></li>
+							<li><a href="#" data-nav-section="experience">Experience</a></li>
+							<li><a href="#" data-nav-section="skills">Skills</a></li>
+							<li><a href="#" data-nav-section="education">Education</a></li>
+							<li><a href="#" data-nav-section="service">Services</a></li>
+							<li><a href="#" data-nav-section="language">Languages</a></li>
+							<li><a href="#" data-nav-section="portfolio">Portfolio</a></li>
+							<li><a href="#" data-nav-section="awards">Awards</a></li>
+							<li><a href="#" data-nav-section="interests">Interests</a></li>
+							<li><a href="#" data-nav-section="clients">Clients</a></li>
+							<li><a href="#" data-nav-section="journal">Journal</a></li>
+							<li><a href="#" data-nav-section="reference">References</a></li>
+							<!-- <li><a href="#" data-nav-section="endorsements">Endorsements</a></li> -->
+							<li><a href="#" data-nav-section="appoinment">Appointment</a></li>
+							<li id="lastlI"><a href="#" data-nav-section="contact">Contact</a></li>
+						</ul>
+					</div>
+				</nav>
+
+			</aside>
+			  
+			<div id="johnDoe-main">
+
+				<section id="johnDoe-hero" class="text-center" data-section="home">
+						<div class="mt-5">
+							<h1 id="homeUserFullName"></h1>
+							<h3 class="ml-5 mr-5" id="homeUserAbout"></h3>
+							<div id="homeUserAboutDiv" class="homeUserAboutDiv text-left ml-5 mr-5"></div>
+							<div class="text-left ml-5"><button class="readBtn text-left" onclick="myFunctionRead()" id="myBtn">Read more</button></div>
+							<div></div>
+							<a  id="ResumeUrl" class="downloadBtn" href="#">Download Resume</a>
+						</div>
+				<div class="socialMediaIcon mt-5">
+						<button id="socilaMediaBg" class="socilaMediaBg">	<!-- Facebook -->
+							
+						</button>
+					</div>
+
+				</section>
+
+				<section id="aboutDiv" class="johnDoe-about mt-5" data-section="about">
+					<div class="johnDoe-narrow-content">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+									<div class="col-md-12">
+										<div class="about-desc">
+											<h1 class="text-center"><span  class="heading-meta">About</span> Me</h1>
+											<h2 id="aboutHeading" class="johnDoe-heading"></h2>
+											<!-- <p id="aboutDescription" class="aboutDescription"></p> -->
+										</div>
+									</div>
+								</div>
+							
+								<div class="container-fluid">
+									<div id="aboutDetails" class="row aboutSocialInfo">
+									</div>
+								</div>
+
+								<div class="container-fluid">
+									<div id="aboutPhotos" class="row">
+										
+									</div>
+
+									<div class="row">
+										<div id="profileVideo" class="col-md-4 mb-5">
+											<div class="banner_thumb ">
+												<!-- <div class="home_img wow slideInRight" data-wow-duration="1.5s" data-wow-delay=".1s">
+												   <img src="./images/logo.png" alt=""  style='height: 100%; width: 100%; object-fit: contain'>
+												</div>
+												<div class="play">
+											 	  <a id="skillVideo" class="venobox" data-autoplay="true" data-vbtype="video" href="https://icircles.app/"> <i class="fas fa-play-circle"></i></a>
+												</div> -->
+										   </div>
+										   
+										</div>
+					
+									</div>
+								</div>
+					
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+
+				<section id="experienceDiv" class="johnDoe-experience " data-section="experience">
+					<div  class="johnDoe-narrow-content">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+									<div class="col-md-12">
+										<div class="about-desc">
+											<h1 class="text-center">My<span  class="heading-meta"> Experience</span></h1>
+										</div>
+									</div>
+								</div>
+								<div class="container-fluid">
+									<div class="row">
+										<div id="experienceFullCard" class="col-md-12 animate-box" data-animate-effect="fadeInRight">
+									
+										</div>
+									</div>
+								</div>
+					
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="skillsDiv" class="johnDoe-skills " data-section="skills">
+					<div  class="johnDoe-narrow-content">
+						<div class="row">
+							<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<h1 class="animate-box text-center" style="font-weight: bold; font-size: 44px; text-transform: uppercase;">My<span  class="heading-meta"> Skills</span></h1>
+							</div>
+						</div>
+						<div id="skillBar" class="row mt-5">
+
+						</div>
+					</div>
+				</section>
+
+				<section id="educationDiv" class="johnDoe-education " data-section="education">
+					<div  class="johnDoe-narrow-content">
+						<div class="row">
+							<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<h1 class="animate-box text-center" style="font-weight: bold; font-size: 44px; text-transform: uppercase;">My<span  class="heading-meta"> Education</span></h1>
+							</div>
+						</div>
+					 <div class="container mt-5">
+						<div id="educationSectionData" class="row noWrapGrid">
+							
+						</div>	
+					</div>
+					</div>
+				</section>
+
+				<section id="servicesDiv" class="johnDoe-services " data-section="service">
+					<div  class="johnDoe-narrow-content">
+						<div class="row">
+							<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<h1 class="animate-box text-center" style="font-weight: bold; font-size: 44px; text-transform: uppercase;">My<span  class="heading-meta"> Services</span></h1>
+							</div>
+						</div>
+					 <div class="container">
+						<div id="servicesData" class="row">
+							
+						</div>	
+					</div>
+					</div>	
+				</section>
+
+				
+				<section id="languageDiv" class="johnDoe-language " data-section="language">
+					<div  class="johnDoe-narrow-content">
+						<div class="row">
+							<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<h1 class="animate-box text-center" style="font-weight: bold; font-size: 44px; text-transform: uppercase;"><span  class="heading-meta">Languages</span></h1>
+							</div>
+						</div>
+					 <div class="container">
+						<div id="languageSectionData" class="row">
+							
+						</div>	
+					</div>
+					</div>	
+				</section>
+
+				<section id="portfolioDiv" class="johnDoe-portfolio" data-section="portfolio">
+					<div  class="johnDoe-narrow-content">
+						<div class="row mb-5">
+							<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<h1 class="animate-box text-center" style="font-weight: bold; font-size: 44px; text-transform: uppercase;">My<span  class="heading-meta"> Portfolio</span></h1>
+							</div>
+						</div>
+						<div id="portfolioData" class="row">
+							
+						</div>
+						
+					</div>
+				</section>
+
+				<section id="awardDiv" class="johnDoe-awards " data-section="awards">
+					<div  class="johnDoe-narrow-content">
+						<div class="row">
+							<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<h1 class="animate-box text-center" style="font-weight: bold; font-size: 44px; text-transform: uppercase;"><span  class="heading-meta">Awards</span></h1>
+							</div>
+						</div>
+					  <div class="container">
+						 <div id="awardSectionData" class="row noWrapGrid">
+							 
+						 </div>	
+	
+					  </div>
+					</div>	
+				</section>
+
+
+				<section id="interestDiv" class="johnDoe-interests " data-section="interests">
+					<div  class="johnDoe-narrow-content">
+						<div class="row">
+							<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<h1 class="animate-box text-center" style="font-weight: bold; font-size: 44px; text-transform: uppercase;"><span  class="heading-meta">Interests</span></h1>
+							</div>
+						</div>
+					 <div class="container mt-5">
+						<div id="interestSectionData" class="row mt-3">
+							
+						</div>	
+					</div>
+					</div>	
+				</section>
+
+
+				<section id="clientDiv" class="johnDoe-clients " data-section="clients">
+					<div  class="johnDoe-narrow-content">
+						<div class="row mb-5">
+							<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<h1 class="animate-box text-center" style="font-weight: bold; font-size: 44px; text-transform: uppercase;">My<span  class="heading-meta"> Clients</span></h1>
+							</div>
+						</div>
+						<div id="clientSectionData" class="row mt-3">
+							
+						</div>
+					</div>
+				</section>
+
+
+				<section id="blogDiv" class="johnDoe-journal " data-section="journal">
+					<div  class="johnDoe-narrow-content">
+						<div class="row mb-5">
+							<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<h1 class="animate-box text-center" style="font-weight: bold; font-size: 44px; text-transform: uppercase;">My<span  class="heading-meta"> Journal</span></h1>
+							</div>
+						</div>
+						<div id="journalSectionData">
+						
+						</div>
+					</div>
+					<!-- Load More Button -->
+					<button id="loadmore">Load More...</button>
+				</section>
+
+				<section id="referenceDiv" class="johnDoe-reference " data-section="reference">
+					<div  class="johnDoe-narrow-content">
+						<div class="row mb-5">
+							<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<h1 class="animate-box text-center" style="font-weight: bold; font-size: 44px; text-transform: uppercase;">My<span  class="heading-meta"> Reference</span></h1>
+							</div>
+						</div>
+						<div id="referencesData" class="row">
+							
+						</div>
+					
+					</div>
+				</section>
+				
+				<section id="appointmentDiv" class="johnDoe-appoinment " data-section="appoinment">
+					<div class="johnDoe-narrow-content">
+						<div class="row mb-5">
+							<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<h1 class="animate-box text-center" style="font-weight: bold; font-size: 44px; text-transform: uppercase;"><span  class="heading-meta">Appointment</span></h1>
+							</div>
+						</div>
+						<div class="row mb-5">
+							<div class="col-md-1"></div>
+							<div class="col-md-10 appoinmentCard animate-box" data-animate-effect="fadeInBottom">
+								<h3>Available Days and Timings</h3>
+								<p>Saturday (6.45 AM To 7.45  PM)</p>
+								<p>Sunday (6.45 AM To 7.45  PM)</p>
+								<div class="row mt-5">
+								 <div class="col-md-12 mb-3"  data-animate-effect="fadeInBottom">
+									<label for="title">TITLE</label>
+									<div class="input-group mb-3">
+  									<input type="text" class="form-control" placeholder="" id="title" name="title">
+									</div>
+								 </div>
+								 <div class="col-md-6 mb-3"  data-animate-effect="fadeInBottom">
+									<label for="email">EMAIL</label>
+									<div class="input-group mb-3">
+  									<input type="email" class="form-control" placeholder="" id="email" name="email">
+									</div>
+								 </div>
+								 <div class="col-md-6 mb-3"  data-animate-effect="fadeInBottom">
+									<label for="date">DATE</label>
+									<div class="input-group mb-3">
+  									<input type="date" class="form-control" placeholder="" id="date" name="date">
+									</div>
+								 </div>
+								 <div class="col-md-6 mb-3"  data-animate-effect="fadeInBottom">
+									<label for="formTime">FROM TIME</label>
+									<div class="input-group mb-3">
+  									<input type="time" class="form-control" placeholder="" id="fromTime" name="fromTime">
+									</div>
+								 </div>
+								 <div class="col-md-6 mb-3"  data-animate-effect="fadeInBottom">
+									<label for="toTime">TO TIME</label>
+									<div class="input-group mb-3">
+  									<input type="time" class="form-control" placeholder="" id="toTime" name="toTime">
+									</div>
+								 </div>
+								 <button class="formButton"  data-animate-effect="fadeInBottom">Set Appointment</button>
+								</div>
+							</div>
+							<div class="col-md-1"></div>
+					    </div>
+					</div>
+				</section>
+				<section id="contactDiv" class="johnDoe-contact " data-section="contact">
+					<div class="johnDoe-narrow-content">
+						<div class="row mb-5">
+							<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<h1 class="animate-box text-center" style="font-weight: bold; font-size: 44px; text-transform: uppercase;"><span  class="heading-meta">Contact</span></h1>
+							</div>
+						</div>
+						<div class="row mb-5">
+							<div class="col-md-1"></div>
+							<div class="col-md-10 contactCard animate-box">
+								<div class="row mt-5">
+								 <div class="col-md-12 mb-3">
+									<label for="subject">SUBJECT</label>
+									<div class="input-group mb-3">
+  									<input type="text" class="form-control" placeholder="" id="subject" name="subject">
+									</div>
+								 </div>
+								 <div class="col-md-6 mb-3">
+									<label for="email">EMAIL</label>
+									<div class="input-group mb-3">
+  									<input type="email" class="form-control" placeholder="" id="email" name="email">
+									</div>
+								 </div>
+								 <div class="col-md-6 mb-3">
+									<label for="date">DATE</label>
+									<div class="input-group mb-3">
+  									<input type="date" class="form-control" placeholder="" id="date" name="date">
+									</div>
+								 </div>
+								 <div class="col-md-12 mb-3">
+									<label for="message">MESSAGE</label>
+									<div class="input-group mb-3">
+  									<textarea  type="text" class="form-control" placeholder="" id="message" name="message">
+									</textarea>
+								 </div>
+								</div>
+								<button class="formButton">Send</button>
+							</div>
+							<div class="col-md-1"></div>
+					    </div>
+					</div>
+				</section>
+
+
+			</div><!-- end:johnDoe-main -->
+		</div><!-- end:container-wrap -->
+	</div><!-- end:johnDoe-page -->
+</div>
+	<button
+	type="button"
+	class="btn-floating"
+	id="btn-back-to-top">
+	<i class="fas fa-arrow-up"></i>
+</button>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Counters -->
+	<script src="js/jquery.countTo.js"></script>
+
+
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
+	<!-- <script src="js/custom.js"></script> -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script>
+		function openRightMenu() {
+		  document.getElementById("rightMenu").style.display = "block";
+		}
+		
+		function closeRightMenu() {
+		  document.getElementById("rightMenu").style.display = "none";
+		}
+
+//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+	 window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+<script>
+	var myVar;
+	
+	function myFunction() {
+	  myVar = setTimeout(showPage, 3000);
+	}
+	
+	function showPage() {
+	  document.getElementById("loader").style.display = "none";
+	  document.getElementById("wholePage").style.display="block";
+	}
+</script>
+	<script>
+		const loadmore = document.querySelector('#loadmore');
+			let currentItems = 2;
+			loadmore.addEventListener('click', (e) => {
+				const elementList = [...document.querySelectorAll('.list-element')];
+				for (let i = currentItems; i < currentItems + 2; i++) {
+					if (elementList[i]) {
+						elementList[i].style.display = 'block';
+					}
+				}
+				currentItems += 2;
+		
+				// Load more button will be hidden after list fully loaded
+				if (currentItems >= elementList.length) {
+					event.target.style.display = 'none';
+				}
+			})
+		</script>
+<!-- For Read more/Read less -->
+<script>
+	function myFunctionRead() {
+	  var dots = document.getElementById("dots");
+	  var moreText = document.getElementById("more");
+	  var btnText = document.getElementById("myBtn");
+	
+	  if (dots.style.display === "none") {
+		dots.style.display = "inline";
+		btnText.innerHTML = "Read more"; 
+		moreText.style.display = "none";
+	  } else {
+		dots.style.display = "none";
+		btnText.innerHTML = "Read less"; 
+		moreText.style.display = "inline";
+	  }
+	}
+	</script>
+
+</body>
+
+</html>
